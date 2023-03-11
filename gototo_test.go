@@ -1,8 +1,8 @@
 package gototo_test
 
 import (
-	"io/ioutil"
 	"log"
+	"os"
 	"strings"
 	"testing"
 
@@ -23,7 +23,7 @@ func Equal(a, b []int) bool {
 }
 
 func TestParseSelectionToDraw(t *testing.T) {
-	data, err := ioutil.ReadFile("draws_test.html")
+	data, err := os.ReadFile("draws_test.html")
 
 	if err != nil {
 		log.Fatal(err)
@@ -56,7 +56,7 @@ func TestParseSelectionToDraw(t *testing.T) {
 }
 
 func TestParseNextDraw(t *testing.T) {
-	data, err := ioutil.ReadFile("nextdraw_test.html")
+	data, err := os.ReadFile("nextdraw_test.html")
 
 	if err != nil {
 		log.Fatal(err)
